@@ -7,6 +7,11 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.Scanner;
 
+/*
+*   测试更新是否成功
+*
+*/
+
 public class Client {
     public static void main(String[] args) throws IOException {
         Socket socket = new Socket("localhost",8888);
