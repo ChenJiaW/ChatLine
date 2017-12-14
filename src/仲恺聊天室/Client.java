@@ -7,10 +7,6 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.Scanner;
 
-/*
-*   测试更新是否成功
-*
-*/
 
 public class Client {
     public static void main(String[] args) throws IOException {
@@ -61,7 +57,7 @@ public class Client {
         }
     }
 
-    public static void getClientName(DataInputStream in) throws IOException {
+    private static void getClientName(DataInputStream in) throws IOException {
         int length,no;
         String ClientText;
 
@@ -75,7 +71,7 @@ public class Client {
 
     }
 
-    public static void playWithMe(DataInputStream in,DataOutputStream out) throws IOException {
+    private static void playWithMe(DataInputStream in, DataOutputStream out) throws IOException {
         System.out.println("当前处于接收状态：");
         String clientGetText;
         String clientSentText;
@@ -89,7 +85,7 @@ public class Client {
         } while(!"-exit".equalsIgnoreCase(clientGetText) || !"-exit".equalsIgnoreCase(clientSentText));
     }
 
-    public static void playWithOther(DataInputStream in,DataOutputStream out) throws IOException {
+    private static void playWithOther(DataInputStream in, DataOutputStream out) throws IOException {
         System.out.println("请输入你想要通信的人的编号：");
         Scanner sc = new Scanner(System.in);
         String clientGetTest,clientSentTest;
